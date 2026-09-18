@@ -203,7 +203,3 @@ pytest
 Estudante de Desenvolvimento Full Stack na Universidade Cruzeiro do Sul
 
 [![GitHub](https://img.shields.io/badge/GitHub-SEU--USUARIO-181717?logo=github)](https://github.com/SEU-USUARIO)
-
-## Licença
-
-Este projeto está em desenvolvimento. Caso a licença MIT seja adotada, adicione um arquivo `LICENSE` com o texto oficial da licença ao repositório.
