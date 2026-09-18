@@ -1,4 +1,4 @@
-# InovaTech Supply
+git add .# InovaTech Supply
 
 Sistema interno de **gestão de estoque e pedidos**, com API REST em Flask, banco de dados configurável (MySQL ou SQLite) e catálogo web dinâmico com visual HUD/gamer.
 
