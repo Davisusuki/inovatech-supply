@@ -104,7 +104,21 @@ pip install -r requirements.txt
 
 ### 4. Configure o banco de dados
 
-A aplicação funciona sem configuração adicional usando SQLite. Para usar MySQL, crie um arquivo `.env` na pasta `sistema/` com as variáveis abaixo:
+A aplicação funciona sem configuração adicional usando SQLite. Para usar MySQL, copie o arquivo de exemplo e preencha os valores no arquivo `.env`:
+
+**Windows (PowerShell):**
+
+```powershell
+Copy-Item .env.example .env
+```
+
+**Linux/macOS:**
+
+```bash
+cp .env.example .env
+```
+
+O arquivo `.env.example` contém o modelo abaixo:
 
 ```env
 DB_USER=seu_usuario

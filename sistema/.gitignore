@@ -1,6 +1,7 @@
 # Segredos e configurações locais
 .env
 .env.*
+!.env.example
 *.pem
 *.key
 config.local.py
