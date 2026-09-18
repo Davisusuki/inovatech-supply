@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InovaTech Supply — Detalhes do Produto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header class="header">
+           <a href="/" class="logo">
+            <span class="logo-icon">◈</span>INOVATECH
+        </a>
+        <nav class="nav">
+            <a href="/">Produtos</a>
+            <a href="#">Clientes</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb" id="breadcrumb">
+            <a href="/">Catálogo</a> <span>/</span> <span id="breadcrumb-produto">Carregando...</span>
+        </nav>
+
+        <div id="produto-detalhe">
+            <!-- Skeleton enquanto carrega -->
+            <div class="produto-layout">
+                <div class="skeleton produto-imagem-skeleton"></div>
+                <div class="produto-info">
+                    <div class="skeleton" style="height:32px;width:70%;margin-bottom:14px;"></div>
+                    <div class="skeleton" style="height:18px;width:40%;margin-bottom:24px;"></div>
+                    <div class="skeleton" style="height:60px;width:100%;margin-bottom:24px;"></div>
+                    <div class="skeleton" style="height:40px;width:50%;"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        InovaTech Supply — sistema interno de gestão
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/produto.js') }}"
+            data-id-produto="{{ id_produto }}"></script>
+</body>
+</html>

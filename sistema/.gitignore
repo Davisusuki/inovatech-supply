@@ -1,0 +1,32 @@
+# Segredos e configurações locais
+.env
+.env.*
+*.pem
+*.key
+config.local.py
+instance/
+
+# Ambiente virtual
+venv/
+.venv/
+env/
+
+# Cache e arquivos gerados
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Banco de dados local e dumps
+*.db
+*.sqlite
+*.sqlite3
+*.sql.bak
+
+# Editor e sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dependências de front-end
+node_modules/

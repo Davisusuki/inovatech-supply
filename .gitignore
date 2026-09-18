@@ -1,0 +1,15 @@
+# ambiente virtual
+.venv/
+
+# Variaveis de ambiente (senhas,chaves)
+.env
+
+# Cache do python
+__pycache__/
+
+#configuração de IDE
+.vscode/
+
+#arquivos de sistema
+.DS_Store
+Thumbs.db

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InovaTech Supply — Gestão</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <a href="#produtos" class="logo">
+            <span class="logo-icon">◈</span>INOVATECH
+        </a>
+        <nav class="nav">
+            <a href="#produtos" class="active">Produtos</a>
+            <a href="{{ url_for('cadastro_clientes') }}">Clientes</a>
+            <a href="#carrinho"> Carrinho</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section id="produtos">
+            <div class="titulo-pagina">
+                <h1>Catálogo de Produtos</h1>
+                <span class="contagem" id="contagem-produtos"></span>
+            </div>
+
+            <div class="banners-catalogo" aria-label="Destaques do catálogo">
+                <a class="banner-catalogo banner-catalogo--hardware" href="#produtos">
+                    <img src="{{ url_for('static', filename='img/produtos/msi-geforce-rtx-5060-8gb.png') }}" alt="Placa de vídeo em destaque">
+                    <span class="banner-catalogo__conteudo">
+                        <small>Potência para jogar</small>
+                        <strong>Hardware de alto desempenho</strong>
+                        <span>Ver produtos</span>
+                    </span>
+                </a>
+                <a class="banner-catalogo banner-catalogo--memoria" href="#produtos">
+                    <img src="{{ url_for('static', filename='img/produtos/memoria-ram-kingston-fury-beast-32gb.png') }}" alt="Memória RAM em destaque">
+                    <span class="banner-catalogo__conteudo">
+                        <small>Mais velocidade</small>
+                        <strong>Atualize seu setup</strong>
+                        <span>Explorar memória</span>
+                    </span>
+                </a>
+                <a class="banner-catalogo banner-catalogo--perifericos" href="#produtos">
+                    <img src="{{ url_for('static', filename='img/mouse-logitech-g203.png') }}" alt="Mouse gamer em destaque">
+                    <span class="banner-catalogo__conteudo">
+                        <small>Precisão no controle</small>
+                        <strong>Periféricos para jogar</strong>
+                        <span>Conhecer opções</span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="layout-catalogo">
+                <aside class="filtro-lateral">
+                    <h4>Filtrar</h4>
+                    <ul id="lista-categorias" class="lista-categorias">
+                        <li class="filtro-item ativo" data-categoria="todos">Tudo</li>
+                    </ul>
+                </aside>
+
+                <div id="lista-produtos" class="grid-produtos" aria-live="polite">
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clientes">
+            <div class="titulo-pagina">
+                <h1>Clientes</h1>
+            </div>
+            <div id="lista-clientes" class="grid-produtos"></div>
+        </section>
+        
+        <section id="carrinho">
+            <div class="titulo-pagina">
+                <h1>Carrinho de Compras</h1>
+                <span class="contagem" id="contagem-itens">0</span>            
+            
+            </div>
+
+            <div class="carrinho-container">
+            <div id="lista-carrinho" class="lista-carrinho">
+                <!-- Itens do carrinho serão preenchidos aqui-->
+            </div>
+            <aside class="resumo-carrinho">
+                <h3>Resumo do pedido</h3>
+                <div class="resumo-item">
+                    <span>Subtotal</span>
+                    <span id="subtotal">R$ 0,00</span>
+                </div>
+                <div class="resumo-item">
+                    <span>Desconto:</span>
+                    <span id="desconto">R$ 0,00</span>
+                </div>
+                <div class="resumo-item total">
+                    <span>Total:</span>
+                    <span id="total">R$ 0,00</span>
+                </div>
+                <button class="btn-finalizar">Finalizar Pedido</button>
+            </aside>                             
+        </section>
+    </main>
+
+
+    <footer class="footer footer-expandido">
+        <div class="footer__grid">
+            <section class="footer__col">
+                <h2>Departamentos</h2>
+                <a href="#produtos">Hardware</a>
+                <a href="#produtos">Computadores</a>
+                <a href="#produtos">Monitores</a>
+                <a href="#produtos">Eletrônicos</a>
+                <a href="#produtos">Periféricos</a>
+                <a href="#produtos">Acessórios</a>
+            </section>
+
+            <section class="footer__col">
+                <h2>Institucional</h2>
+                <a href="#clientes">Clientes</a>
+                <a href="#produtos">Sobre a InovaTech</a>
+                <a href="#produtos">Nossas soluções</a>
+                <a href="#produtos">Blog</a>
+                <h2 class="footer__subtitulo">Ajuda</h2>
+                <a href="#carrinho">Como comprar</a>
+                <a href="#carrinho">Formas de pagamento</a>
+                <a href="#carrinho">Fale conosco</a>
+            </section>
+
+            <section class="footer__col footer__newsletter">
+                <h2>Newsletter</h2>
+                <p>Receba novidades e ofertas no seu e-mail</p>
+                <form class="newsletter-form">
+                    <label class="sr-only" for="newsletter-email">Seu e-mail</label>
+                    <input id="newsletter-email" type="email" placeholder="Seu e-mail" required>
+                    <button type="submit" aria-label="Assinar newsletter">&rarr;</button>
+                </form>
+                <h2 class="footer__subtitulo">Pagamento</h2>
+                <div class="pagamentos" aria-label="Formas de pagamento aceitas">
+                    <span>PIX</span>
+                    <span>Cartão</span>
+                    <span>Boleto</span>
+                </div>
+            </section>
+        </div>
+        <div class="footer__base">
+            <span>InovaTech Supply</span>
+            <span>Sistema interno de gestão</span>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
